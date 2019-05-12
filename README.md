@@ -1,27 +1,40 @@
 # StockApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was created to support a new idea related to the social network' posts as a stock symbol, this example was made it with angular 7 and there are some requires previous to run it.
 
-## Development server
+## Previous requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You need to have previusly installed Nodejs with this version v8.9.4, https://nodejs.org/es/download/
 
-## Code scaffolding
+when finished the installation of node you can install, angular CLI and json-server usign npm with the followings commands:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run the commad below to install json-server
 
-## Build
+```
+npm install -g json-server
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run the commad below to install Angular 7 
+
+```
+npm install -g @angular/cli
+```
+
+## Run the app 
+
+First you have to start json-server to see the mock data `json-server --watch data.json`, this file is located in the following path `stockApp/api`.
+
+Once you got starter the server you can run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Author
 
-## Further help
+* **Julio Cesar Ramirez Jimenez**  - [Julio Cesar](https://github.com/JulioCesarRamirez)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
