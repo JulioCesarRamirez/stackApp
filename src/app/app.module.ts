@@ -23,6 +23,13 @@ import { DetailsComponent } from './components/details/details.component';
     TimerComponent,
     ActionComponent,
     DetailsComponent
+  ], exports: [
+    AppComponent,
+    NavBarComponent,
+    HomeComponent,
+    TimerComponent,
+    ActionComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
