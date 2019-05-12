@@ -1,11 +1,24 @@
-<button type="button" class="btn"
-  [ngClass]="{'btn-outline-info': hold, 'btn-outline-warning': sell, 'btn-outline-success': buy}"
-  (click)="show = !show">
+<div *ngIf="!hold">
+  <button type="button" *ngIf="!show" class="btn" [ngClass]="{'btn-outline-warning': sell, 'btn-outline-success': buy}"
+    (click)="show = !show">
+    {{typeName}}
+  </button>
+</div>
+<div class="btn btn-outline-info" *ngIf="hold">
   {{typeName}}
-</button>
+</div>
 
-<div class="row" *ngIf="show">
-  <div class="col">
-    content
+<div class="input-group w-fix" *ngIf="show">
+  <input type="number" #box class="form-control" (change)="getNumber(box.value)" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">$</span>
+    <span class="input-group-text">{{price}}</span>
+
+  </div>
+  <div class="input-group-append">
+    <button type="button" *ngIf="show" class="btn" [ngClass]="{'btn-warning': sell, 'btn-success': buy}"
+      (click)="show = !show">
+      {{typeName}}
+    </button>
   </div>
 </div>

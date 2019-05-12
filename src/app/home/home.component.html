@@ -35,13 +35,13 @@
           <th scope="row">{{i + 1}}</th>
           <td>{{item.social_name}}</td>
           <td>
-            <app-action type="hold"></app-action>
+            <app-action price="0" type="hold"></app-action>
           </td>
           <td>
-            <app-action type="buy"></app-action>
+            <app-action price="{{item.price}}"  type="buy"></app-action>
           </td>
           <td>
-            <app-action type="sell"></app-action>
+            <app-action price="{{item.price}}" type="sell"></app-action>
           </td>
         </tr>
       </tbody>
