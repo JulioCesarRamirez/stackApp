@@ -1,0 +1,11 @@
+<button type="button" class="btn"
+  [ngClass]="{'btn-outline-info': hold, 'btn-outline-warning': sell, 'btn-outline-success': buy}"
+  (click)="show = !show">
+  {{typeName}}
+</button>
+
+<div class="row" *ngIf="show">
+  <div class="col">
+    content
+  </div>
+</div>

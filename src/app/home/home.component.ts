@@ -20,11 +20,19 @@ export class HomeComponent implements OnInit {
     this.httpService.get('social_network', null).subscribe(
       data => {
         this.socialsNet = data;
+        this.socialsNet.forEach((item, index) => {
+          this.socialsNet[index].price = item.price * this.random();
+          this.socialsNet[index].post = item.post * this.random();
+        });
       },
       err => {
         console.log(err);
       }
     );
+  }
+
+  random(): number {
+    return Math.floor(Math.random() * Math.floor(100));
   }
 
 }

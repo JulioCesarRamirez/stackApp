@@ -1,0 +1,14 @@
+<div class="container" *ngIf="socialNetwork">
+  <div class="row mt-2">
+    <div class="col">
+      <h2>{{socialNetwork.social_name}}</h2>
+      <p>Post : {{socialNetwork.post | number}} Price : {{socialNetwork.price | currency}}</p>
+      <h6><small class="text-muted">Last updated 10 days ago</small></h6>
+    </div>
+  </div>
+  <div style="display: block">
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>

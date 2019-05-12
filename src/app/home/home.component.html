@@ -5,16 +5,16 @@
     </div>
   </div>
   <div class="row mt-2">
-    <div class="col-4 mt-3" *ngFor="let item of socialsNet">
+    <div class="col-md-4 col-sm-6 mt-3" *ngFor="let item of socialsNet">
       <div class="card size-img" style="width: 18rem;">
-        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+        <a routerLink="/details" [queryParams]="{id: item.id}">
+          <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+        </a>
         <div class="card-body">
           <h5 class="card-title">{{item.social_name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <p class="card-subtitle mt-2">Post : {{item.post | number}}</p>
+          <p class="card-subtitle mt-2">Price : {{item.price | currency}}</p>
+          <p class="card-text"><small class="text-muted">Last updated 10 days ago</small></p>
         </div>
       </div>
     </div>
@@ -24,60 +24,25 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Social network</th>
+          <th scope="col">Sell</th>
+          <th scope="col">Buy</th>
+          <th scope="col">Hold</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor="let item of socialsNet; let i = index">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{item.social_name}}</td>
+          <td>
+            <app-action type="hold"></app-action>
+          </td>
+          <td>
+            <app-action type="buy"></app-action>
+          </td>
+          <td>
+            <app-action type="sell"></app-action>
+          </td>
         </tr>
       </tbody>
     </table>

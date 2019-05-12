@@ -1,0 +1,67 @@
+{
+  "social_network": [
+    {
+      "id": 1,
+      "social_name": "Facebook",
+      "post": 100,
+      "price": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/FaceB.png"
+    },
+    {
+      "id": 2,
+      "social_name": "Twitter",
+      "post": 100,
+      "price": 10,
+      "image": "https://www.educativa.com/wp-content/uploads/2014/01/twitterenformacion.png"
+    },
+    {
+      "id": 3,
+      "social_name": "Instagram",
+      "post": 100,
+      "price": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+    },
+    {
+      "id": 4,
+      "social_name": "Pinterest",
+      "post": 100,
+      "price": 10,
+      "image": "https://seeklogo.com/images/P/pinterest-logo-CA98998DCB-seeklogo.com.png"
+    },
+    {
+      "id": 5,
+      "social_name": "Linkedin",
+      "post": 100,
+      "price": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+    },
+    {
+      "id": 6,
+      "social_name": "Youtube",
+      "post": 100,
+      "price": 10,
+      "image": "https://cdn.icon-icons.com/icons2/1584/PNG/512/3721679-youtube_108064.png"
+    },
+    {
+      "id": 7,
+      "social_name": "Foursquare",
+      "post": 100,
+      "price": 10,
+      "image": "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/foursquare-512.png"
+    },
+    {
+      "id": 8,
+      "social_name": "Google +",
+      "post": 100,
+      "price": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Google_Plus_logo_2015.svg"
+    },
+    {
+      "id": 9,
+      "social_name": "Whatsapp",
+      "post": 100,
+      "price": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/WhatsApp_logo-color-vertical.svg"
+    }
+  ]
+}
