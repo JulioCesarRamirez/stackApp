@@ -11,10 +11,6 @@ export class HttpServiceService {
   constructor(
     private http: HttpClient
   ) { }
-  //this method will retunr the token
-  getAuthToken() {
-    return localStorage.getItem('token');
-  }
 
   /**
    * Perfors any type of http request

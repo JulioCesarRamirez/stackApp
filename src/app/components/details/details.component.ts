@@ -26,7 +26,7 @@ export class DetailsComponent implements OnInit {
   ];
 
   ngOnInit() {
-    let id = parseInt(this.router.snapshot.queryParamMap.get('id'));
+    let id = parseInt(this.router.snapshot.queryParams.params.id);
     this.getSocialNetwork(id);
   }
 
